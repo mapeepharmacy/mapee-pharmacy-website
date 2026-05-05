@@ -113,6 +113,24 @@
             background: #219a52;
         }
         
+        .btn-demo {
+            background: #3498db;
+            color: white;
+        }
+        
+        .btn-demo:hover {
+            background: #2980b9;
+        }
+        
+        .btn-full {
+            background: #27ae60;
+            color: white;
+        }
+        
+        .btn-full:hover {
+            background: #219a52;
+        }
+        
         .features {
             padding: 60px 0;
             background: white;
@@ -152,6 +170,48 @@
         .feature-card h3 {
             margin-bottom: 15px;
             color: #2c3e50;
+        }
+        
+        .download-section {
+            padding: 60px 0;
+            background: #e8f8f5;
+        }
+        
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .download-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .download-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .download-card .version {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+        
+        .download-card ul {
+            list-style: none;
+            margin: 20px 0;
+            text-align: left;
+        }
+        
+        .download-card li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
         }
         
         .pricing {
@@ -313,6 +373,10 @@
                 grid-template-columns: 1fr;
             }
             
+            .download-grid {
+                grid-template-columns: 1fr;
+            }
+            
             .featured {
                 transform: scale(1);
             }
@@ -332,6 +396,7 @@
             <div class="nav">
                 <a href="#home">Home</a>
                 <a href="#features">Features</a>
+                <a href="#download">Download</a>
                 <a href="#pricing">Pricing</a>
                 <a href="#contact">Contact</a>
             </div>
@@ -343,8 +408,8 @@
         <div class="container">
             <h1>Smart Pharmacy Management System</h1>
             <p>"Trusted pharmacy management. Quality inventory control.<br>Your success, every step of the way."</p>
-            <a href="https://bit.ly/4tRh7Wt" class="btn" target="_blank">📥 FREE DEMO</a>
-            <a href="#pricing" class="btn btn-outline">💰 View Pricing</a>
+            <a href="https://bit.ly/4tRh7Wt" class="btn btn-demo" target="_blank">📥 FREE DEMO</a>
+            <a href="#download" class="btn btn-outline">💾 Full Version</a>
         </div>
     </section>
     
@@ -382,6 +447,50 @@
                     <div class="feature-icon">📦</div>
                     <h3>Smart Inventory</h3>
                     <p>Low stock alerts. Expiry tracking. Never run out of critical medications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Download Section -->
+    <section id="download" class="download-section">
+        <div class="container">
+            <h2 class="section-title">📥 Download Mapee Pharmacy</h2>
+            <div class="download-grid">
+                <!-- Demo Version Card -->
+                <div class="download-card">
+                    <h3>🎯 FREE DEMO</h3>
+                    <div class="version">Version 3.0 - Trial</div>
+                    <ul>
+                        <li>✓ Fully functional demo</li>
+                        <li>✓ No installation required</li>
+                        <li>✓ Sample products included</li>
+                        <li>✓ Works immediately</li>
+                        <li>✓ No MySQL needed</li>
+                        <li>✓ Single EXE file</li>
+                    </ul>
+                    <a href="https://bit.ly/4tRh7Wt" class="btn btn-demo" target="_blank">
+                        ⬇️ Download Demo (Free)
+                    </a>
+                    <p style="margin-top: 15px; font-size: 12px; color: #7f8c8d;">Size: ~45 MB | No installation required</p>
+                </div>
+                
+                <!-- Full Version Card -->
+                <div class="download-card">
+                    <h3>⭐ FULL VERSION</h3>
+                    <div class="version">Version 3.0 - PRO</div>
+                    <ul>
+                        <li>✓ All PRO features unlocked</li>
+                        <li>✓ Network mode (multiple computers)</li>
+                        <li>✓ Remote fixes & support</li>
+                        <li>✓ Unlimited transactions</li>
+                        <li>✓ Priority assistance</li>
+                        <li>✓ MySQL database (full performance)</li>
+                    </ul>
+                    <a href="https://bit.ly/3Rmik9K" class="btn btn-full" target="_blank">
+                        💰 Download Full Version
+                    </a>
+                    <p style="margin-top: 15px; font-size: 12px; color: #7f8c8d;">Size: ~50 MB | Requires license key</p>
                 </div>
             </div>
         </div>
@@ -494,6 +603,7 @@
             <p style="margin-top: 10px; font-size: 12px;">
                 <a href="#home">Home</a> | 
                 <a href="#features">Features</a> | 
+                <a href="#download">Download</a> | 
                 <a href="#pricing">Pricing</a> | 
                 <a href="#contact">Contact</a>
             </p>
