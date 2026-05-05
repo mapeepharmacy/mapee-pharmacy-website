@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapee Pharmacy System | Smart Pharmacy Management Software</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f0f8ff;
+        }
+        
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .logo span {
+            color: #27ae60;
+        }
+        
+        .nav {
+            float: right;
+            margin-top: 5px;
+        }
+        
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+        
+        .nav a:hover {
+            color: #27ae60;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #27ae60 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #f39c12;
+            color: #2c3e50;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 0 10px;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background: #e67e22;
+            transform: scale(1.05);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+        
+        .btn-outline:hover {
+            background: white;
+            color: #2c3e50;
+        }
+        
+        .features {
+            padding: 60px 0;
+            background: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .pricing {
+            padding: 60px 0;
+            background: #f0f8ff;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .pricing-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .price {
+            font-size: 36px;
+            color: #27ae60;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        .price span {
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+        
+        .pricing-card ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .pricing-card li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .featured {
+            border: 2px solid #27ae60;
+            transform: scale(1.02);
+        }
+        
+        .contact {
+            padding: 60px 0;
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+        }
+        
+        .contact-info {
+            margin-top: 30px;
+        }
+        
+        .contact-info p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        
+        .contact-info a {
+            color: #27ae60;
+            text-decoration: none;
+        }
+        
+        .footer {
+            background: #1a252f;
+            color: #7f8c8d;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .nav {
+                float: none;
+                text-align: center;
+                margin-top: 15px;
+            }
+            
+            .nav a {
+                margin: 0 10px;
+                font-size: 14px;
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .btn {
+                display: block;
+                margin: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">🏥 MAPEE <span>PHARMACY</span> SYSTEM</div>
+            <div class="nav">
+                <a href="#home">Home</a>
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </header>
+    
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Smart Pharmacy Management System</h1>
+            <p>"Trusted pharmacy management. Quality inventory control.<br>Your success, every step of the way."</p>
+            <a href="#demo" class="btn">📥 FREE DEMO</a>
+            <a href="#contact" class="btn btn-outline">💬 Contact Sales</a>
+        </div>
+    </section>
+    
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">⚡ Why Pharmacy Owners Choose Mapee</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Batch Scanning</h3>
+                    <p>Scan 10 products in 10 seconds. No clicking between scans. Save hours every week.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔌</div>
+                    <h3>True Offline Mode</h3>
+                    <p>Internet down? No problem. Your pharmacy keeps running. Sales continue.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🖥️</div>
+                    <h3>Network Ready</h3>
+                    <p>One license. Unlimited computers on your network. All share same database.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Own It Forever</h3>
+                    <p>One-time payment. No monthly fees. Free lifetime updates.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Remote Fix System</h3>
+                    <p>We fix problems remotely. You don't reinstall anything.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📦</div>
+                    <h3>Smart Inventory</h3>
+                    <p>Low stock alerts. Expiry tracking. Never run out.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title">💰 Simple, Fair Pricing</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>FREE DEMO</h3>
+                    <div class="price">FREE</div>
+                    <ul>
+                        <li>✓ Full features (30 days)</li>
+                        <li>✓ Local database only</li>
+                        <li>✓ Email support</li>
+                        <li>✓ No credit card required</li>
+                    </ul>
+                    <a href="#contact" class="btn" style="background:#3498db">Try Free</a>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>ULTIMATE</h3>
+                    <div class="price">TSh 150,000<span> one-time</span></div>
+                    <ul>
+                        <li>✓ Unlimited users</li>
+                        <li>✓ Network mode</li>
+                        <li>✓ Lifetime updates</li>
+                        <li>✓ Priority support</li>
+                        <li>✓ Remote fixes</li>
+                    </ul>
+                    <a href="#contact" class="btn">Buy Now</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>QUARTER</h3>
+                    <div class="price">TSh 50,000<span> one-time</span></div>
+                    <ul>
+                        <li>✓ 3 users max</li>
+                        <li>✓ All features</li>
+                        <li>✓ Email support</li>
+                        <li>✓ Free updates (1 year)</li>
+                    </ul>
+                    <a href="#contact" class="btn" style="background:#3498db">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">📞 Get in Touch</h2>
+            <div class="contact-info">
+                <p>📞 Phone / WhatsApp: <a href="tel:+255779233905">+255 779 233 905</a></p>
+                <p>✉️ Email: <a href="mailto:mapee.pharmacy@gmail.com">mapee.pharmacy@gmail.com</a></p>
+                <p>💬 Support: <a href="https://wa.me/255779233905">Click to WhatsApp</a></p>
+            </div>
+            <div style="margin-top: 30px;">
+                <a href="https://mapeepharmacy.github.io/mapee-pharmacy-website/" class="btn">📥 Download Free Demo</a>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Mapee Pharmacy System. All rights reserved.</p>
+            <p style="margin-top: 10px;">Simple. Fast. Affordable.</p>
+        </div>
+    </footer>
+</body>
+</html>
